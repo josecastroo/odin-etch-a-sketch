@@ -1,0 +1,11 @@
+.item {
+    height: calc(400px / 16);
+    width: calc(400px / 16);
+    border: 1px solid black;
+    box-sizing: border-box;
+    flex: none;
+}
+
+.item:hover {
+    background-color: aquamarine;
+}
