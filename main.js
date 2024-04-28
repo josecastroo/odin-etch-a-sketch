@@ -8,9 +8,14 @@ for (let i = 0; i < 16 * 16; i++) {
     div.style.width = "calc(500px / 16)";
     div.style.border = "1px solid black";
     div.style.boxSizing = "border-box";
+    div.style.opacity = "0.1";
 
     div.addEventListener("mouseover", function() {
-        this.style.backgroundColor = "black";
+        this.style.backgroundColor = `rgb(${Math.floor(Math.random() * 256)}, ${Math.floor(Math.random() * 256)}, ${Math.floor(Math.random() * 256)})`;
+        let opacity = parseFloat(getComputedStyle(this).opacity);
+        if (opacity < 1) {
+        this.style.opacity = (opacity + 0.1).toFixed(1);
+        }
     });
 
     gridContainer.appendChild(div);
@@ -39,8 +44,14 @@ function updateGridValue () {
         div.style.border = "1px solid black";
         div.style.boxSizing = "border-box";
 
+        div.style.opacity = "0.1";
+
         div.addEventListener("mouseover", function() {
-            this.style.backgroundColor = "black";
+            this.style.backgroundColor = `rgb(${Math.floor(Math.random() * 256)}, ${Math.floor(Math.random() * 256)}, ${Math.floor(Math.random() * 256)})`;
+            let opacity = parseFloat(getComputedStyle(this).opacity);
+            if (opacity < 1) {
+            this.style.opacity = (opacity + 0.1).toFixed(1);
+            }
         });
 
         gridContainer.appendChild(div);
