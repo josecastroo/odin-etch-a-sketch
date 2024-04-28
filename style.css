@@ -1,11 +1,16 @@
-.item {
-    height: calc(400px / 16);
-    width: calc(400px / 16);
-    border: 1px solid black;
-    box-sizing: border-box;
-    flex: none;
+body {
+    margin: 0;
+    padding: 0;
 }
 
-.item:hover {
-    background-color: aquamarine;
+#main-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 50px;
+    
+}
+
+h1 {
+    margin: 10px;
 }
